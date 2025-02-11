@@ -37,7 +37,7 @@ stack.visitPage('youtube.com'); // Visited: youtube.com
 stack.visitPage('facebook.com'); // Visited: facebook.com
 stack.visitPage('twitter.com'); // Visited: twitter.com
 
-stack.goBack(); 
-stack.goBack(); 
-stack.goBack(); 
+stack.goBack();
+stack.goBack();
+stack.goBack();
 stack.goForward();
