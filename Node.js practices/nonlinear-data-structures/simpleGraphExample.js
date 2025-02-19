@@ -33,17 +33,7 @@ graph.addVertex("A");
 graph.addVertex("B");
 graph.addVertex("C");
 graph.addVertex("D");
-graph.addVertex("A");
-graph.printVertex();
 
 graph.addEdge("A", "B");
-graph.addEdge("A", "C");
-graph.addEdge("A", "D");
-graph.addEdge("D", "A");
-graph.addEdge("C", "D");
-graph.addEdge("B", "D");
-
-graph.addEdge("A", "E");
-graph.addEdge("F", "C");
-//graph.printVertex();
+graph.addEdge("B", "A");
 graph.printGraph();
