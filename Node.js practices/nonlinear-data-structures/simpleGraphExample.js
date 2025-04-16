@@ -2,7 +2,7 @@ class Graph {
     constructor() {
         this.adjacencyList = {}; // Initialize an empty object to store the adjacency list
     }
-    // addVertex is like a creating or adding node in graph
+    // addVertex is like creating or adding node in graph
     addVertex(vertex) {
         if (!this.adjacencyList[vertex]) {
             this.adjacencyList[vertex] = []; // Add a key to the adjacency list with an empty array as the value
