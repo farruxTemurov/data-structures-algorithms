@@ -22,7 +22,7 @@ class UserOperations {
 
             if (!existingRoles.includes(operation)) {
                 existingRoles.push(operation);  // Add new operation
-                this.map.set(user, existingRoles); // Update the Map with new array
+                this.map.set(user, existingRoles); // Update the Map with a new array
                 return `New operation "${operation}" added for ${user}`;
             } else {
                 return `The operation "${operation}" already exists for ${user}`;
