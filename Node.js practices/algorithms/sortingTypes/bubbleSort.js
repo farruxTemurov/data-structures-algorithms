@@ -1,5 +1,5 @@
 function bubbleSortAsc(arr) {
-    let n = arr.length;     // which provide the size of the array and store it in n
+    let n = arr.length;     // which provides the size of the array and stores it in n
     let swapped;            // which is used to check if any swapping has been done in the inner loop
     do {
         swapped = false;    // which is set to false at the beginning of each outer loop iteration
@@ -17,7 +17,7 @@ function bubbleSortAsc(arr) {
     } while (swapped);       // which continues the loop as long as swapping is done in the inner loop
 }
 function bubbleSortDesc(arr) {
-    let n = arr.length;     // which provide the size of the array and store it in n
+    let n = arr.length;     // which provides the size of the array and stores it in n
     let swapped;            // which is used to check if any swapping has been done in the inner loop
     do {
         swapped = false;    // which is set to false at the beginning of each outer loop iteration
