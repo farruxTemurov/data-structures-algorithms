@@ -9,5 +9,16 @@ var romanToInt = function (s) {
         'M': 1000
     };
 
-    
-}
+    let sum = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (romanMap[s[i] < romanMap[s[i + 1]]]) {
+            sum -= romanMap[s[i]];
+        } else {
+            sum += romanMap[s[i]];
+        }
+    }
+    return sum;
+};
+
+console.log(romanToInt("III")); // output: 3;
