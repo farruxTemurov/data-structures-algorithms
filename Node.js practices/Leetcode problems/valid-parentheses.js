@@ -23,6 +23,8 @@ function isPair(last, cur) {
 }
 
 s = "()";
-console.log(isValid(s));
-s = "()";
-console.log(isValid(s));
+console.log(isValid(s)); // output -> true;
+s = "()[]{}";
+console.log(isValid(s)); // output -> true;
+s = "(]";
+console.log(isValid(s)); // output -> false;
