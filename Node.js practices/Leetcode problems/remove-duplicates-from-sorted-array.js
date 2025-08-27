@@ -1,7 +1,7 @@
 var removeDuplicates = function (nums) {
     let i = 1;
 
-    for (let j = 0; j < nums.length; j++) {
+    for (let j = 1; j < nums.length; j++) {
         if (nums[j] !== nums[i - 1]) {
             nums[i] = nums[j];
             i++;
@@ -10,5 +10,6 @@ var removeDuplicates = function (nums) {
     return i;
 };
 
-nums = [1, 1, 2];
+let nums = [1, 1, 2];
 console.log(removeDuplicates(nums));
+
