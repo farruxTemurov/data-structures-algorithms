@@ -8,3 +8,8 @@ var strStr = function (haystack, needle) {
     }
     return -1;
 }
+
+haystack = "sadbutsad";
+needle = "sad";
+
+console.log(strStr(haystack, needle));
