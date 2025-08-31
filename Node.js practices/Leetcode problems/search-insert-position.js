@@ -21,3 +21,7 @@ var searchInsert = function (nums, target) {
 nums = [1, 3, 5, 6];
 target = 5;
 console.log(searchInsert(nums, target));
+
+nums = [1, 3, 5, 6];
+target = 7;
+console.log(searchInsert(nums, target));
