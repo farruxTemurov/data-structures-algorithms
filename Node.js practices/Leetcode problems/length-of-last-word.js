@@ -15,3 +15,6 @@ const lengthOfLastWord = function (s) {
 
     return end - start;
 }
+
+s = "Hello World";
+console.log(lengthOfLastWord(s));
