@@ -15,4 +15,9 @@ const addBinary = function (a, b) {
         result = (sum % 2) + result;
         carry = Math.floor(sum / 2);
     }
+    return result;
 }
+
+a = "11";
+b = "1";
+console.log(addBinary(a, b));
