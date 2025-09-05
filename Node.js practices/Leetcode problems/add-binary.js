@@ -21,3 +21,7 @@ const addBinary = function (a, b) {
 a = "11";
 b = "1";
 console.log(addBinary(a, b));
+
+a = "1010";
+b = "1011";
+console.log(addBinary(a, b));
