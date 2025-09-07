@@ -23,3 +23,6 @@ const mySqrt = function (x) {
 
 x = 4;
 console.log(mySqrt(x));
+
+x = 11;
+console.log(mySqrt(x));
