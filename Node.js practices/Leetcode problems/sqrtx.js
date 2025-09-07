@@ -3,7 +3,8 @@
 const mySqrt = function (x) {
     if (x < 2) return x;
 
-    let left = 1, right = Math.floor(x / 2);
+    let left = 1;
+    let right = Math.floor(x / 2);
 
     while (left <= right) {
         const mid = Math.floor((left + right) / 2);
@@ -11,7 +12,7 @@ const mySqrt = function (x) {
 
         if (square === x) {
             return mid;
-        } else if (square > x) {
+        } else if (square < x) {
             left = mid + 1;
         } else {
             right = mid - 1;
@@ -19,3 +20,6 @@ const mySqrt = function (x) {
     }
     return right;
 }
+
+x = 4;
+console.log(mySqrt(x));
