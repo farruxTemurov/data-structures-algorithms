@@ -26,3 +26,16 @@ c = 9;
 
 findTheLargest(a, b, c);
 
+// 3.  N faktorial hisoblash
+
+const findFactorial = function (n) {
+    let factorial = 1;
+
+    for (let i = 1; i <= n; i++) {
+        factorial = factorial * i;
+    }
+    return factorial;
+}
+
+n = 5;
+console.log(findFactorial(n));
