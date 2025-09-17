@@ -19,4 +19,4 @@ const binary_search = function (myList, item) {
 }
 
 const myList = [1, 3, 4, 6, 7, 8, 10, 12, 23];
-console.log(binary_search(myList, 6)); // output: 3
+console.log(binary_search(myList, 4)); // output: 2
