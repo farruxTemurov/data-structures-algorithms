@@ -9,3 +9,7 @@ const isSameTree = function (p, q) {
 
     return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
+
+const tree1 = { val: 1, left: { val: 2, left: null, right: null }, right: null };
+const tree2 = { val: 1, left: { val: 2, left: null, right: null }, right: null };
+console.log(isSameTree(tree1, tree2));
