@@ -37,7 +37,7 @@ class LinkedList {
     find(val) {
         let current = this.head;
         while (current) {
-            if (current.val = val) return current;
+            if (current.val === val) return current;
             current = current.next;
         }
         return null;
