@@ -32,4 +32,10 @@ class Stack {
     }
 };
 
+const s = new Stack();
 
+s.push(10);
+s.push(23);
+console.log(s.peek());
+console.log(s.pop());
+console.log(s.peek());
