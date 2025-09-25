@@ -18,3 +18,7 @@ function quickSort(arr) {
 
     return [...quickSort(left), pivot, ...quickSort(right)];
 }
+
+const arr = [10, 7, 8, 9, 1, 5];
+console.log("Before sorting: ", arr);
+console.log("After sorting: ", quickSort(arr));
