@@ -10,7 +10,7 @@ const mergeSort = function (arr) {
     const left = arr.slice(0, mid);
     const right = arr.slice(mid);
 
-    return mergeSort(mergeSort(left), mergeSort(right));
+    return merge(mergeSort(left), mergeSort(right));
 }
 
 function merge(left, right) {
@@ -20,11 +20,16 @@ function merge(left, right) {
     while (i < left.length && j < right.length) {
         if (left[i] < right[j]) {
             result.push(left[i]);
+            i++
         } else {
             result.push(right[j]);
+            j++
         }
     }
 
     return result.concat(left.slice(i)).concat(right.slice(j));
 }
 
+const arr = [38, 27, 43, 3, 9, 82, 10];
+console.log("Original: ", arr);
+console.log("Sorted: ", mergeSort(arr));
