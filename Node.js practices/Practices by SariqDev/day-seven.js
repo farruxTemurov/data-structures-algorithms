@@ -2,7 +2,7 @@
 // implements Divide and Conquer method
 
 function quickSort(arr) {
-    if (arr.length <= 1) return arr;
+    if (arr.length <= 1) return arr; // base case
 
     const pivot = arr[arr.length - 1];
     const left = [];
