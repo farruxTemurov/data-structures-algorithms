@@ -59,4 +59,19 @@ class HashTable {
         return false;
     }
 
+    // Show all keys
+    key() {
+        const keysArr = [];
+        for (let bucket of this.table) {
+            if (bucket) {
+                for (let pair of bucket) {
+                    keysArr.push(pair[0]);
+                }
+            }
+        }
+        return keysArr;
+    }
+
+    // 
+
 }
