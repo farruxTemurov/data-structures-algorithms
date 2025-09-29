@@ -72,6 +72,16 @@ class HashTable {
         return keysArr;
     }
 
-    // 
-
+    // Show all values
+    values() {
+        const valuesArr = [];
+        for (let bucket of this.table) {
+            if (bucket) {
+                for (let pair of bucket) {
+                    valuesArr.push(pair[1]);
+                }
+            }
+        }
+        return valuesArr;
+    }
 }
