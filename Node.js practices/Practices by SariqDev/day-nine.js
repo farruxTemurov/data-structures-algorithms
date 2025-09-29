@@ -16,5 +16,19 @@ class HashTable {
         return hash;
     }
 
+    // Insert or update key - value
+    set(key, value) {
+        const index = this._hash(key);
+        if (!this.table[index]) {
+            this.table[index] = [];
+        }
+        //Check if the key already exists -> update it
+        for (let pair of this.table[index]) {
+            if (pair[0] === key) {
+                pair[1] = value;
+                return;
+            }
+        }
+    }
 
 }
