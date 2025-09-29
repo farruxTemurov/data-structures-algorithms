@@ -45,6 +45,18 @@ class HashTable {
         return undefined;
     }
 
-    
+    // Remove key-value pair
+    remove(key) {
+        const index = this._hash(key);
+        if (!this.table[index]) return false;
+
+        for (let i = 0; i < this.table[index].length; i++) {
+            if (this.table[index][i][0] === key) {
+                this.table[index].splice(i, 1);
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
