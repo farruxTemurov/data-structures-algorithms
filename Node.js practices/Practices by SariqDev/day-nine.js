@@ -29,6 +29,22 @@ class HashTable {
                 return;
             }
         }
+        //Else add new pair
+        this.table[index].push([key, value]);
     }
+
+    // Retrieve value by key
+    get(key) {
+        const index = this._hash(key);
+        if (!this.table[index]) return undefined;
+        for (let pair of this.table[index]) {
+            if (pair[0] === key) {
+                return pair[1];
+            }
+        }
+        return undefined;
+    }
+
+    
 
 }
