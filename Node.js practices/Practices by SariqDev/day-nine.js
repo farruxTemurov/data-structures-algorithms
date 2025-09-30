@@ -60,7 +60,7 @@ class HashTable {
     }
 
     // Show all keys
-    key() {
+    keys() {
         const keysArr = [];
         for (let bucket of this.table) {
             if (bucket) {
@@ -85,3 +85,21 @@ class HashTable {
         return valuesArr;
     }
 }
+
+const hashTable = new HashTable(20);
+
+hashTable.set("name", "Tim");
+hashTable.set("age", 23);
+hashTable.set("job", "Full-stack developer");
+
+console.log(hashTable.get("name"));  // Tim
+console.log(hashTable.get("age"));   // 23
+
+hashTable.set("age", 24); // update
+console.log(hashTable.get("age"));   // 24
+
+hashTable.remove("job");
+console.log(hashTable.get("job"));   // undefined
+
+console.log(hashTable.keys());   // [ 'name', 'age' ]
+console.log(hashTable.values()); // [ 'Tim', 24 ]
