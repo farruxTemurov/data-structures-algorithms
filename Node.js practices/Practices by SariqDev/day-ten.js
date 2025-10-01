@@ -36,23 +36,21 @@ bfs(graph, "A");*/
 
 // function to find target person
 function search(graph, startNode, target = "elon musk") {
-    let queue = [...graph[startNode]]; // start with neighbors of startNode
-    let searched = new Set();          // track visited nodes
+    let queue = [...graph[startNode]];   // start with the neighbor of startNode
+    let searched = new Set();  // mark if the node has been searched to avoid loops (looking at the same person over and over)
 
-    while (queue.length > 0) {
-        let person = queue.shift();    // dequeue
+    while (queue.length > 0) {  // if there is at least one person
+        let person = queue.shift();  // get sb from the beginning of the neighbors of the startNode
 
-        if (!searched.has(person)) {
+        if (!searched.has(person)) { // if we haven't yet loooked in the person
             if (person === target) {
-                console.log(`${target}ni topdik!`);
-                return true;
+                console.log(`Biz ${target}ni topdik`);
             } else {
-                queue.push(...graph[person]); // add this person's neighbors
-                searched.add(person);
+                queue.push(...graph[person]); // if the person doesn't match the target, we add his neighbors to the queue
+                searched.add(person); // mark him searched
             }
         }
     }
-
     return false;
 }
 
@@ -70,4 +68,6 @@ const graph = {
 };
 
 console.log(search(graph, "siz"));
-console.log(search(graph, "ali", "vali"));   
+console.log(search(graph, "ali", "vali"));
+
+
