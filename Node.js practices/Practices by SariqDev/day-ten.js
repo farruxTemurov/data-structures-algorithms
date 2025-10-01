@@ -30,7 +30,6 @@ const graph = {
     F: []
 };
 
-// Run BFS
 bfs(graph, "A");*/
 
 
