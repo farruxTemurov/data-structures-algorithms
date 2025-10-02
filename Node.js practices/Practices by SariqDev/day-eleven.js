@@ -38,7 +38,6 @@ function dijkstra(graph, start) {
   return distances;
 }
 
-// Example graph
 const graph = {
   A: { B: 1, D: 4 },
   B: { A: 1, C: 2, E: 5 },
