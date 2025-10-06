@@ -7,6 +7,9 @@ const map = function (arr, fn) {
         transformedArr[i] = fn(arr[i], i);
     }
 
-    return transformedArrl;
+    return transformedArr;
 };
 
+const nums = [2, 4, 6];
+const count = map(nums, (num) => num + 1);
+console.log("Transformed count:", count);
