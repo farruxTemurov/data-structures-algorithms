@@ -10,3 +10,11 @@ const filter = function (arr, fn) {
     }
     return filteredArr;
 }
+
+const arr = [5, 12, 8, 20];
+
+function fn(value, index) {
+  return value > 10;
+}
+
+console.log(filter(arr, fn));
