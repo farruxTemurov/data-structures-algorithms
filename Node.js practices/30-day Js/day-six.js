@@ -9,3 +9,12 @@ const reduce = function (nums, fn, init) {
 
     return val;
 }
+function sum(accum, curr) {
+    return accum + curr;
+}
+
+const nums = [1, 2, 3, 4];
+const init = 0;
+
+const result = reduce(nums, sum, init);
+console.log(result);
