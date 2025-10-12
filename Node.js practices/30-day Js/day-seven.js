@@ -13,3 +13,7 @@ const compose = function (functions) {
         }
     }
 }
+
+const fn = compose([x => x + 1, x => x * x, x => 2 * x]);
+console.log(fn(4));
+
