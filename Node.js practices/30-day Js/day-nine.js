@@ -14,3 +14,5 @@ const argumentsLength = function (...args) {
 const argumentsLength = function (...args) { // rest parameter -> gets all the values of the array individually
     return args.length;
 }
+
+console.log(argumentsLength({},null,"3"));
