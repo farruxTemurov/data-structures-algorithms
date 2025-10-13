@@ -11,6 +11,6 @@ const argumentsLength = function (...args) {
 }*/
 
 // more simpler method then writing all those lines of code above
-const argumentsLength = function (...args) {
+const argumentsLength = function (...args) { // rest parameter -> gets all the values of the array individually
     return args.length;
 }
