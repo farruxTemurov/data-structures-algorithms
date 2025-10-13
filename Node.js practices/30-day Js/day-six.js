@@ -1,29 +1,20 @@
-// 2626. Array Reduce Transformation
-/*
-const reduce = function (nums, fn, init) {
-    let val = init;
+// Filter Elements from Array
 
-    for (let i = 0; i < nums.length; i++) {
-        val = fn(val, nums[i]);
+const filter = function (arr, fn) {
+    const filteredArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (fn(arr[i], i)) {
+            filteredArr.push(arr[i]);
+        }
     }
-
-    return val;
-}*/
-
-// Using forEach
-const reduce = function (nums, fn, init) {
-    let val = init;
-    nums.forEach(num => {
-        val = fn(val, num);
-    });
-    return val;
+    return filteredArr;
 }
 
+const arr = [5, 12, 8, 20];
 
-function sum(accum, curr) {
-    return accum + curr;
+function fn(value, index) {
+  return value > 10;
 }
-const nums = [1, 2, 3, 4];
-const init = 0;
-const result = reduce(nums, sum, init);
-console.log(result);
+
+console.log(filter(arr, fn));

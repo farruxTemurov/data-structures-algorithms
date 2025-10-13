@@ -1,20 +1,15 @@
-// Filter Elements from Array
+// Apply Transform Over Each Element in Array
 
-const filter = function (arr, fn) {
-    const filteredArr = [];
+const map = function (arr, fn) {
+    const transformedArr = [];
 
     for (let i = 0; i < arr.length; i++) {
-        if (fn(arr[i], i)) {
-            filteredArr.push(arr[i]);
-        }
+        transformedArr[i] = fn(arr[i], i);
     }
-    return filteredArr;
-}
 
-const arr = [5, 12, 8, 20];
+    return transformedArr;
+};
 
-function fn(value, index) {
-  return value > 10;
-}
-
-console.log(filter(arr, fn));
+const nums = [2, 4, 6];
+const count = map(nums, (num) => num + 1);
+console.log("Transformed count:", count);

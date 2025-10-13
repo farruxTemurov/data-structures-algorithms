@@ -1,19 +1,29 @@
-// 2629. Function Composition
-const compose = function (functions) {
+// 2626. Array Reduce Transformation
+/*
+const reduce = function (nums, fn, init) {
+    let val = init;
 
-    return function (x) {
-        if (functions.length === 0) {
-            return x;
-        } else {
-            let result = x;
-            for (let i = functions.length - 1; i >= 0; i--) {
-                result = functions[i](result);
-            }
-            return result;
-        }
+    for (let i = 0; i < nums.length; i++) {
+        val = fn(val, nums[i]);
     }
+
+    return val;
+}*/
+
+// Using forEach
+const reduce = function (nums, fn, init) {
+    let val = init;
+    nums.forEach(num => {
+        val = fn(val, num);
+    });
+    return val;
 }
 
-const fn = compose([x => x + 1, x => x * x, x => 2 * x]);
-console.log(fn(4));
 
+function sum(accum, curr) {
+    return accum + curr;
+}
+const nums = [1, 2, 3, 4];
+const init = 0;
+const result = reduce(nums, sum, init);
+console.log(result);
