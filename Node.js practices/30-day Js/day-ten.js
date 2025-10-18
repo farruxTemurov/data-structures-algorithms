@@ -14,3 +14,16 @@ var once = function (fn) {
         }
     }
 }
+
+const sum = (a, b, c) => a + b + c;
+
+const sumOnce = once(sum);
+
+const argsArray = [
+    [1, 2, 3],
+    [2, 3, 6]
+];
+
+argsArray.forEach(args => {
+    console.log(sumOnce(...args));
+});
