@@ -4,7 +4,7 @@ var once = function (fn) {
     let hasBeenCalled = false;
     let result = [];
 
-    return function (...args) {
+    return function (...args) { // anonymous function call
         if (!hasBeenCalled) {
             hasBeenCalled = true;
             result = fn(...args);
