@@ -15,7 +15,7 @@ var once = function (fn) {
     }
 }
 
-const sum = (a, b, c) => a + b + c;
+/*const sum = (a, b, c) => a + b + c;
 
 const sumOnce = once(sum);
 
@@ -26,4 +26,9 @@ const argsArray = [
 
 argsArray.forEach(args => {
     console.log(sumOnce(...args));
-});
+});*/
+
+const mupltiply = (a, b, c) => (a * b * c);
+const mupltiplyOnce = once(mupltiply);
+const argsArray = [[5, 7, 4], [2, 3, 6], [4, 6, 8]];
+argsArray.forEach(args => console.log(mupltiplyOnce(...args)));
