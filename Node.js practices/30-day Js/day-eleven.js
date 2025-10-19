@@ -46,5 +46,11 @@ const createMemoizedCounter = function() {
         }
     };
 };
+const counter = createMemoizedCounter();
 
-
+console.log(counter.increment(2)); // 2
+console.log(counter.increment(2)); // 4
+console.log(counter.increment(3)); // 7
+console.log(counter.getCallCount(2)); // 2
+console.log(counter.getCallCount(3)); // 1
+console.log(counter.getCallCount(5)); // 0
