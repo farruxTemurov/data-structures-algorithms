@@ -17,3 +17,11 @@ const memoize = function (fn) {
     }
 }
 
+let callCount = 0;
+const memoizedFn = memoize(function (a, b) {
+    callCount += 1;
+    return a + b;
+})
+console.log(memoizedFn(2, 3)); // 5 --> computed the first time
+memoizedFn(2, 3) // 5 --> it is returned from the cache
+console.log(callCount) // 1 
