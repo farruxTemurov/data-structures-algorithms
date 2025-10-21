@@ -1,3 +1,4 @@
+// searches the list completely from the beginning, making it O(n)
 function linearSearch(arr, searchElement) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === searchElement) {
