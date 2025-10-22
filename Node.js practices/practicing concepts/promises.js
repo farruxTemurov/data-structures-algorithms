@@ -16,3 +16,14 @@ delayedAdd(5, 7)
     }).then(doubled => {
         console.log("Doubled " + doubled);
     });
+
+// greet function
+async function meetAndGreet(name, millis) {
+    await new Promise(resolve => setTimeout(resolve, millis))
+        .then(() => {
+            console.log(`Hello, ${name}`);
+        });
+    return `Waited for ${millis} milliseconds`;
+}
+
+meetAndGreet("Farrukh", 2000).then(console.log);
