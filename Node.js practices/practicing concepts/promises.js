@@ -27,3 +27,46 @@ async function meetAndGreet(name, millis) {
 }
 
 meetAndGreet("Farrukh", 2000).then(console.log);
+
+// function to fetch users and posts
+
+async function fetchUser(id, name) {
+    return new Promise(res => {
+        setTimeout(() => {
+            console.log(`id: ${id}, name: ${name}`);
+            res({ id, name });
+        }, 1000);
+    });
+}
+
+async function fetchPosts(...args) {
+    return new Promise(res => {
+        setTimeout(() => {
+            console.log("User's posts:");
+            args.forEach(post => console.log(post));
+            res(args);
+        }, 2000);
+    });
+}
+
+async function displayData() {
+    console.log("Fetching user...");
+    console.log("Fetching posts...");
+
+    const [user, posts] = await Promise.all([
+        fetchUser(1, "Farrukh"),
+        fetchPosts("Post 1", "Post 2", "Post 3")
+    ]);
+
+    console.log(`User: ${user.name}`);
+    console.log("User's posts:");
+    posts.forEach(post => console.log(post));
+
+    return { user, posts };
+}
+
+displayData();
+
+
+
+
