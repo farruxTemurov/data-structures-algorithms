@@ -8,3 +8,14 @@ const cancellable = function (fn, args, t) {
     const cancelFn = () => clearInterval(timer);
     return cancelFn;
 }
+
+function sayHello(name) {
+    console.log(`Hello ${name}`);
+}
+
+let cancel = cancellable(sayHello, ["Farrukh"], 1000);
+
+setTimeout(() => {
+    cancel();
+    console.log("Stopped");
+}, 5000);
