@@ -11,3 +11,6 @@ const chunk = function (arr, size) {
     return result;
 }
 
+const cars = ['Hyundai', 'Mers', 'Lambo', 'BMW'];
+console.log(chunk(cars, 1));            
+console.log(chunk(cars, 3));            
