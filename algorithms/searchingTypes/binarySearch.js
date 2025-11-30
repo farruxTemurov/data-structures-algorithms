@@ -48,3 +48,7 @@ const searchInsertPosition = function (nums, target) {
     }
     return left; // will return the position of the element to be or already inserted
 }
+
+const nums = [1, 3, 5, 6];
+const target = 4
+console.log(searchInsertPosition(nums, target));
