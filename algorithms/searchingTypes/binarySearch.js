@@ -29,3 +29,22 @@ if (indexElement !== -1) {
 } else {
     console.log(`Element ${searchElement} not found in array`);
 }
+
+// Search Insert Position 
+
+const searchInsertPosition = function (nums, target) {
+    let left = 0, right = nums.length - 1;
+
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+
+        if (nums[mid] === target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return left; // will return the position of the element to be or already inserted
+}
