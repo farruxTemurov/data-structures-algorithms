@@ -16,3 +16,7 @@ const nextGreatestLetter = function (letters, target) {
     // left is already inside the array, modulo does nothing.
     // else: modulo pushes it back to 0 so that we return the first element of the arr(as stated in the constraint)
 }
+
+const letters = ["c", "f", "j"];
+const target = "c";
+console.log(nextGreatestLetter(letters, target));
