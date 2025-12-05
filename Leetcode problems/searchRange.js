@@ -15,3 +15,6 @@ var searchRange = function (nums, target) {
     return [positionOfTarget[0], positionOfTarget[positionOfTarget.length - 1]]; // returns the start and the end index
     // if there are more than two indexes, it gets the first and last.
 }
+
+const nums = [5, 7, 7, 8, 8, 10];
+console.log(searchRange(nums, 7));
