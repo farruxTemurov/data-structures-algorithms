@@ -19,3 +19,9 @@ const findRightInterval = function (intervals) {
     }
     return result;
 }
+
+const intervals1 = [[1, 2]];
+console.log(findRightInterval(intervals1)); // output -> -1
+const intervals2 = [[3, 4], [2, 3], [1, 2]]
+console.log(findRightInterval(intervals2)); // output -> [-1, 0, 1];
+
