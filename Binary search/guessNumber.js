@@ -18,3 +18,5 @@ const guessNumber = function (n) {
         else left = mid + 1;
     }
 };
+
+console.log(guessNumber(100)); // output: 42
