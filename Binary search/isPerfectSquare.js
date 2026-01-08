@@ -20,3 +20,9 @@ const isPerfectSquare = function (num) {
     }
     return false;
 };
+
+let num = 16;
+console.log(isPerfectSquare(num)); // output: true
+
+num = 21;
+console.log(isPerfectSquare(num)); // output: false
