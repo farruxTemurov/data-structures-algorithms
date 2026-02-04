@@ -18,3 +18,7 @@ const arrangeCoins = function (n) {
     }
     return right;
 };
+
+const n = 5;
+console.log(arrangeCoins(n)); // output: 2 because we can only build 2 rows of 
+// stairs with 5 coins, to build the 3rd row, we would need 6 coins.
