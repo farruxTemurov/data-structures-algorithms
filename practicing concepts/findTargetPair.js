@@ -13,3 +13,8 @@ const findTargetPair = function (nums, target) {
     return [];
 }
 
+const nums = [3, 1, 4, 2];
+const target = 5;
+
+console.log(findTargetPair(nums, target)); 
+// Possible output: [0, 1] because 3 + 1 = 4 < 5
