@@ -15,3 +15,6 @@ const removeAllZeros = function (nums) {
     return k;
 }
 
+nums = [0, 1, 0, 3, 0, 5]
+console.log(removeAllZeros(nums)); // output: 3
+console.log(nums); // output: [ 1, 3, 5, 3, 0, 5 ]
