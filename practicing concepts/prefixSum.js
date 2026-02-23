@@ -32,3 +32,5 @@ const countSubarraySum = function (nums, k) {
     return count;
 }
 
+const nums2 = [1, 1, 1], k = 2;
+console.log(countSubarraySum(nums2, k));
