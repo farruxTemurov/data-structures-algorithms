@@ -15,4 +15,8 @@ NumArray.prototype.sumRange = function (left, right) {
     return this.prefix[right + 1] - this.prefix[left];
 };
 
+const obj = new NumArray([-2, 0, 3, -5, 2, -1]);
 
+console.log("Test Case 1 (0, 2): ", obj.sumRange(0, 2)); //output:  1
+console.log("Test Case 1 (2, 5): ", obj.sumRange(2, 5)); //output:  -1
+console.log("Test Case 1 (0, 5): ", obj.sumRange(0, 5)); //output:  -3
