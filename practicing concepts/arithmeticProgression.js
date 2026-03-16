@@ -14,3 +14,5 @@ const canMakeArithmeticProgression = function (arr) {
     return true;
 }
 
+const arr = [1, 5, 8]; // false
+console.log(canMakeArithmeticProgression(arr));
